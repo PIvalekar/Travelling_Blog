@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6f425541e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Top 10 places to visit in Granada</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">enTouriastic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Continents
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Europe</a></li>
+                            <li><a class="dropdown-item" href="#">Asia</a></li>
+                            <li><a class="dropdown-item" href="#">Australia</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Rate us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Gallary/gallary.html">Gallary</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                </form>
+                <form class="d-flex my-3">
+                    <button type="button" class="btn btn-outline-info mx-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign up for free</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body p-5 pt-0">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="firstName" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="lastName" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="username" class="form-label">Username</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control" id="username" placeholder="Username"
+                                            required="">
+                                        <div class="invalid-feedback">
+                                            Your username is required.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email <span
+                                            class="text-muted">(Optional)</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address for shipping updates.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary my-4" type="submit">Sign
+                                up</button>
+                            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+
+                            <hr class="my-2">
+                            <h2 class="fs-5 fw-bold mb-3">Or sign up with</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                                <i class="fa-brands fa-twitter"></i>
+                                Twitter
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                                <i class="fa-brands fa-facebook"></i>
+                                Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                                <i class="fa-brands fa-instagram"></i>
+                                Instagram
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Username</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Header-->
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">Australia</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4">Australia, officially the Commonwealth of Australia, is a sovereign country
+                    comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller
+                    islands.
+                    Australia is the largest country by area in Oceania and the world's sixth-largest country. Australia
+                    is the oldest, flattest, and driest inhabited continent, with the least fertile soils. It is a
+                    megadiverse country, and its size gives it a wide variety of landscapes and
+                    climates, with deserts in the centre, tropical rainforests in the north-east, and mountain ranges in
+                    the south-east.
+
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Plan ypur trip
+                        here</button>
+                    <a href="/contact.html">
+                        <button type="button" class="btn btn-outline-light btn-lg px-4">Need help?</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Main Content-->
+    <div class="container my-4">
+        <div class="place">
+            <div class="text-center">
+                <h2>1. Great Ocean Road</h2>
+                <img src="/Australia/images/Great Ocean Road.jpg" alt="Alhambra" width="70%" height="500">
+                <p class="my-4">The Great Ocean Road is an Australian National Heritage listed 240-kilometre (150 mi)
+                    stretch of road along the south-eastern coast of Australia between the Victorian cities of Torquay
+                    and Allansford. Built by returned soldiers between 1919 and 1932 and dedicated to soldiers killed
+                    during World War I, the road is the world's largest war memorial.
+                    A 45 kilometre section of the Great Ocean Road, between Lorne and Apollo Bay, is the location of the
+                    annual "Great Ocean Road Marathon". First run in 2005, the marathon is part of the Great Ocean Road
+                    Running Festival
+                    In July 2015, former World Road Cycling Champion and Tour de France winner Cadel Evans announced
+                    that the Great Ocean Road would play host to the Cadel Evans Great Ocean Road Race in early 2015,
+                    including elite races for men and women and a mass participation People's Ride.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>2. Kakadu National Park</h2>
+                <img src="/Australia/images/Kakadu National Park.jpg" alt="Generalife" width="70%" height="500">
+                <p class="my-4">Kakadu National Park is a protected area in the Northern Territory of Australia, 171 km
+                    southeast of Darwin. It is a World Heritage Site. Kakadu is also gazetted as a locality, covering
+                    the same area as the national park, with 313 people recorded living there in the 2016 Australian
+                    census.
+                    The park is located within the Alligator Rivers Region of the Northern Territory. It covers an area
+                    of 19,804 km2, extending nearly 200 kilometres from north to south and over 100 kilometres from east
+                    to west.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>3. Carlton Gardens</h2>
+                <img src="/Australia/images/carlton_gardens.jpg" alt="Cathedral" width="70%" height="500">
+                <p class="my-4">The Carlton Gardens is a World Heritage Site located on the northeastern edge of the
+                    Central Business District in the suburb of Carlton, in Melbourne, Australia. A popular picnic and
+                    barbecue area, the heritage-listed Carlton Gardens are home to an array of wildlife, including
+                    brushtail possums.
+                    The 26-hectare (64-acre) site contains the Royal Exhibition Building, Melbourne Museum and Imax
+                    Cinema, tennis courts and an award-winning children's playground. The rectangular site is bound by
+                    Victoria Street, Rathdowne Street, Carlton Street, and Nicholson Street.
+                    The gardens are an example of Victorian landscape design with sweeping lawns and varied European and
+                    Australian tree plantings consisting of deciduous English oaks, White Poplar, plane trees, elms,
+                    conifers, cedars, turkey oaks, Araucarias and evergreens such as Moreton Bay figs, combined with
+                    flower beds of annuals and shrubs. A network of tree-lined paths provides formal avenues for
+                    highlighting the fountains and architecture of the Exhibition building. This includes the grand
+                    allee of plane trees that lead to the exhibition building. Two small ornamental lakes adorn the
+                    southern section of the park. The northern section contains the museum, tennis courts, maintenance
+                    depot and curator's cottage, and the children's playground designed as a Victorian maze. Dramatic
+                    tree-lined avenues, a majestic fountain, formal flowerbeds and miniature lakes are features of these
+                    late nineteenth century Gardens.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>4. Skiing At Snowy Mountains</h2>
+                <img src="/Australia/images/Skiing At Snowy Mountains.jpg" alt="Albayzin" width="70%" height="500">
+                <p class="my-4">The Snowy Mountains, known informally as "The Snowies", is an IBRA subregion in southern
+                    New South Wales, Australia, and is the tallest mountain range in mainland Australia, being part of
+                    the continent's Great Dividing Range cordillera system.
+                    The Snowy Mountains experiences large natural snowfalls every winter, normally during June, July,
+                    August and early September, with the snow cover melting by late spring. It is considered to be one
+                    of the centers of the Australian ski industry during the winter months, with all four snow resorts
+                    in New South Wales being located in the region. The range is host to the mountain plum-pine, a
+                    low-lying type of conifer.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>5. Harbor Bridge</h2>
+                <img src="/Australia/images/Harbor Bridge.jpg" alt="Royal Chapel of Granada" width="70%" height="500">
+                <p class="my-4">The Sydney Harbour Bridge is a heritage-listed steel through arch bridge in Sydney,
+                    spanning Sydney Harbour from the central business district (CBD) to the North Shore. The view of the
+                    bridge, the harbour, and the nearby Sydney Opera House is widely regarded as an iconic image of
+                    Sydney, and of Australia itself. Nicknamed "The Coathanger" because of its arch-based design, the
+                    bridge carries rail, vehicular, bicycle and pedestrian traffic.
+                    The Sydney Harbour Bridge was added to the Australian National Heritage List on 19 March 2007 and to
+                    the New South Wales State Heritage Register on 25 June 1999.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>6. Sydney Opera House</h2>
+                <img src="/Australia/images/The_Opera_House_in_Sydney.jpg" alt="Sacromonte" width="70%" height="500">
+                <p class="my-4">The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on
+                    the banks of Sydney Harbour, it is widely regarded as one of the world's most famous and
+                    distinctive buildings and a masterpiece of 20th century architecture.
+                    Designed by Danish architect Jørn Utzon, but completed by an Australian architectural team
+                    headed by Peter Hall, the building was formally opened on 20 October 1973
+                    On 28 June 2007, the Sydney Opera House became a UNESCO World Heritage Site, having been
+                    listed on the (now defunct) Register of the National Estate since 1980, the National Trust of
+                    Australia register since 1983, the City of Sydney Heritage Inventory since 2000, the New South
+                    Wales State Heritage Register since 2003, and the Australian National Heritage List since
+                    2005. The Opera House was also a finalist in the New7Wonders of the World campaign
+                    list.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>7. Blue Mountains National Park</h2>
+                <img src="/Australia/images/Blue Mountains National Park.jpg" alt="Charterhouse" width="70%"
+                    height="500">
+                <p class="my-4">The Blue Mountains National Park is a protected national park that is located in the
+                    Blue Mountains region of New South Wales, in eastern Australia.
+                    The national park is one of the eight protected areas that, in 2000, was inscribed to form part of
+                    the UNESCO World Heritage–listed Greater Blue Mountains Area. The Greater Blue Mountains was one
+                    of 15 World Heritage places included in the National Heritage List on 21 May 2007. The Blue
+                    Mountains National Park is the most central of the eight protected areas within the World Heritage
+                    Site and it forms part of the Great Dividing Range. The park is also listed on the Australian
+                    Heritage Register and the overall complex of Blue Mountains regional walking tracks is listed on the
+                    State Heritage Register.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>8. Fraser Island</h2>
+                <img src="/Australia/images/fraser-island-aerial.jpg" alt="Mosque of Granada" width="70%" height="500">
+                <p class="my-4">Fraser Island (also known as K'gari and Gari) is a World Heritage-listed island along
+                    the south-eastern coast in the Wide Bay–Burnett region, Queensland, Australia.
+                    The island is about 123 kilometres long and 22 kilometres) wide. It was inscribed
+                    as a World Heritage Site in 1992. The island is considered to be the largest sand island in the
+                    world at 1,840 square kilometres. It is also Queensland's largest island, Australia's
+                    sixth largest island and the largest island on the east coast of Australia.
+                    In 1992 it became a UNESCO World Heritage Site, under the name "Fraser Island"; this name was
+                    altered to the traditional Aboriginal name of K'gari in 2021. In 2009, as part of the Q150
+                    celebrations, Fraser Island was announced as one of the Q150 Icons of Queensland for its role as a
+                    "Natural attraction".
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>9. Uluru</h2>
+                <img src="/Australia/images/Uluru-Australia.jpg" alt="Museum of Fine Arts" width="70%" height="500">
+                <p class="my-4">Uluru, also known as Ayers Rock and officially gazetted as Uluru / Ayers Rock, is a
+                    large sandstone formation in the centre of Australia. It is in the southern part of the Northern
+                    Territory, 335 km southwest of Alice Springs.
+                    Uluru is sacred to the Pitjantjatjara, the Aboriginal people of the area, known as the Aṉangu. The
+                    area around the formation is home to an abundance of springs, waterholes, rock caves, and ancient
+                    paintings. Uluru is listed as a UNESCO World Heritage Site. Uluru and Kata Tjuta, also known as the
+                    Olgas, are the two major features of the Uluṟu-Kata Tjuṯa National Park.
+                    Uluru is one of Australia's most recognisable natural landmarks and has been a popular destination
+                    for tourists since the late 1930s. It is also one of the most important indigenous sites in
+                    Australia.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>10. Rundle Mall In Adelaide</h2>
+                <img src="/Australia/images/Rundle Mall In Adelaide.jpg" alt="Islamic bathhouse" width="70%"
+                    height="500">
+                <p class="my-4">Rundle Mall is a pedestrian street mall located in Adelaide, South Australia. It was
+                    opened as a pedestrian mall in September 1976 by closing the section of Rundle Street between King
+                    William Street and Pulteney Street, to vehicular traffic. The street continues as Rundle Street
+                    (as before) to the east and Hindley Street to the west.
+                    The mall is home to the South Australian flagship stores of many large Australian retailers and many
+                    smaller independent and chain stores. The mall also features a number of arcades and plazas
+                    containing smaller boutiques and eateries. These include the Italianate-style Adelaide Arcade (also
+                    being the first retail establishment in Australia with electric lighting, and allegedly home to six
+                    ghosts), Regent Arcade, Gay's Arcade, City Cross, Southern Cross, Adelaide Central Plaza, Myer
+                    Centre, Renaissance Arcade, and Rundle Place.
+                    There are usually several buskers performing in the mall, licensed by the Adelaide City Council. The
+                    mall's stores are generally open seven days a week.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="text-muted">© 2022 enTouriastic, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

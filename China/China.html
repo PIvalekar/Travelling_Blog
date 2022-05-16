@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6f425541e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Top 10 places in china</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">enTouriastic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Continents
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Europe</a></li>
+                            <li><a class="dropdown-item" href="#">Asia</a></li>
+                            <li><a class="dropdown-item" href="#">Australia</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Rate us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Gallary/gallary.html">Gallary</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                </form>
+                <form class="d-flex my-3">
+                    <button type="button" class="btn btn-outline-info mx-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign up for free</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body p-5 pt-0">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="firstName" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="lastName" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="username" class="form-label">Username</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control" id="username" placeholder="Username"
+                                            required="">
+                                        <div class="invalid-feedback">
+                                            Your username is required.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email <span
+                                            class="text-muted">(Optional)</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address for shipping updates.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary my-4" type="submit">Sign
+                                up</button>
+                            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+
+                            <hr class="my-2">
+                            <h2 class="fs-5 fw-bold mb-3">Or sign up with</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                                <i class="fa-brands fa-twitter"></i>
+                                Twitter
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                                <i class="fa-brands fa-facebook"></i>
+                                Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                                <i class="fa-brands fa-instagram"></i>
+                                Instagram
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Username</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Header-->
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">China</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4">It is the world's most populous country, with a population of more than 1.4
+                    billion. China spans five geographical time zones and borders 14 countries, the second most of any
+                    country in the world after Russia. Covering an area of approximately 9.6 million square kilometers
+                    (3,700,000 sq mi), it is the world's third or fourth largest country. The country consists of 23
+                    provinces, five autonomous regions, four municipalities, and two Special Administrative Regions
+                    (Hong Kong and Macau). The national capital is Beijing and the largest city is Shanghai.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Plan ypur trip
+                        here</button>
+                    <a href="/contact.html">
+                        <button type="button" class="btn btn-outline-light btn-lg px-4">Need help?</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Main Content-->
+    <div class="container my-4">
+        <div class="place">
+            <div class="text-center">
+                <h2>1. The Great Wall of China</h2>
+                <img src="/china/images/the great wall1.jpg" alt="the great wall1" width="70%" height="500">
+                <p class="my-4">The Great Wall of China, is a series of fortifications that were built across the
+                    historical northern borders of ancient Chinese states and Imperial China as protection against
+                    various nomadic groups from the Eurasian Steppe. Several walls were built from as early as the 7th
+                    century BC, with selective stretches later joined together by Qin Shi Huang (220–206 BC), the
+                    first emperor of China. Little of the Qin wall remains. Later on, many successive dynasties built
+                    and maintained multiple stretches of border walls. The best-known sections of the wall were built by
+                    the Ming dynasty (1368–1644).
+                    Apart from defense, other purposes of the Great Wall have included border controls, allowing the
+                    imposition of duties on goods transported along the Silk Road, regulation or encouragement of trade
+                    and the control of immigration and emigration. Furthermore, the defensive characteristics of the
+                    Great Wall were enhanced by the construction of watchtowers, troop barracks, garrison stations,
+                    signaling capabilities through the means of smoke or fire, and the fact that the path of the Great
+                    Wall also served as a transportation corridor.
+                    The frontier walls built by different dynasties have multiple courses. Collectively, they stretch
+                    from Liaodong in the east to Lop Lake in the west, from the present-day Sino–Russian border in the
+                    north to Tao River (Taohe) in the south; along an arc that roughly delineates the edge of the
+                    Mongolian steppe; spanning 21,196.18 km (13,170.70 mi) in total. Today, the defensive system
+                    of the Great Wall is generally recognized as one of the most impressive architectural feats in
+                    history.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>2. Lijiang Old Town</h2>
+                <img src="/china/images/lijiang old town.jpg" alt="lijiang old town" width="70%" height="500">
+                <p class="my-4">Dayan is the historical center of Lijiang City, in Yunnan, China. It is a UNESCO World
+                    Heritage Site.
+                    Performances by the Nakhi of Dongjing Music, an ancient form of Han Chinese ritual music, can be
+                    heard for a fee in Dayan and for a donation in Shuhe, Baisha and sometimes in other villages in the
+                    area. A pricy glamorization of the Tea and Horse Caravans is presented in the form of a musical
+                    organized by film producer and director Zhang Yimou.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>3. Giant Pandas</h2>
+                <img src="/china/images/Giant panda.jpg" alt="Giant panda" width="70%" height="500">
+                <p class="my-4">Chengdu Research Base of Giant Panda Breeding, or simply Chengdu Panda Base, is a
+                    non-profit research and breeding facility for giant pandas and other rare animals. It is located in
+                    Chengdu, Sichuan, China.
+                    Chengdu Panda Base was founded in 1987. It started with 6 giant pandas that were rescued from the
+                    wild. By 2008, it had 124 panda births, and the captive panda population has grown to 83.[1][2]
+                    Its stated goal is to "be a world-class research facility, conservation education center, and
+                    international educational tourism destination.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>4. shangri la city</h2>
+                <img src="/china/images/songzhanlin temple shangri la.jpg" alt="songzhanlin temple shangri la" width="70%" height="500">
+                <p class="my-4">Shangri-La is a county-level city in Northwestern Yunnan Province, People's Republic of
+                    China and is the location of the seat of the Diqing Tibetan Autonomous Prefecture, bordering Sichuan
+                    to the northwest, north, and east.
+                    Shangri-La was formerly called Zhongdian County but was renamed on 17 December 2001 and upgraded
+                    into a county-level city on 16 December 2014 as Shangri-La after the fictional land of Shangri-La in
+                    the 1933 James Hilton novel Lost Horizon, in an effort to promote tourism in the area. Formerly, the
+                    Tibetan population referred to the city by its traditional name Gyalthang or Gyaitang, meaning
+                    "Royal plains". This ancient name is reflected in the Tibetan Pinyin name within the town of
+                    Jiantang, the city seat.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>5. The Yellow Mountains</h2>
+                <img src="/china/images/the yellow mountain.jpg" alt="the yellow mountain" width="70%"
+                    height="500">
+                <p class="my-4">Huangshan, literally meaning the Yellow Mountain(s), is a mountain range in southern
+                    Anhui Province in eastern China. It was originally called “Yishan”, and it was renamed because of a
+                    legend that Emperor Xuanyuan once made alchemy here. Vegetation on the range is thickest below 1,100
+                    meters (3,600 ft), with trees growing up to the treeline at 1,800 meters (5,900 ft).
+                    The area is well known for its scenery, sunsets, peculiarly-shaped granite peaks, Huangshan pine
+                    trees, hot springs, winter snow and views of the clouds from above. Huangshan is a frequent subject
+                    of traditional Chinese paintings and literature, as well as modern photography. It is a UNESCO World
+                    Heritage Site and one of China's major tourist destinations.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>6. The Terracotta Army</h2>
+                <img src="/china/images/terracota army.jpg" alt="terracota army" width="70%" height="500">
+                <p class="my-4">The Terracotta Army is a collection of terracotta sculptures depicting the armies of Qin
+                    Shi Huang, the first Emperor of China. It is a form of funerary art buried with the emperor in
+                    210–209 BCE with the purpose of protecting the emperor in his afterlife.
+                    The figures, dating from approximately the late third century BCE, were discovered in 1974 by
+                    local farmers in Lintong County, outside Xi'an, Shaanxi, China. The figures vary in height according
+                    to their roles, the tallest being the generals. The figures include warriors, chariots and horses.
+                    Estimates from 2007 were that the three pits containing the Terracotta Army held more than 8,000
+                    soldiers, 130 chariots with 520 horses, and 150 cavalry horses, the majority of which remained
+                    buried in the pits near Qin Shi Huang's mausoleum. Other terracotta non-military figures were
+                    found in other pits, including officials, acrobats, strongmen, and musicians.
+                    The tomb appears to be a hermetically sealed space roughly the size of a football pitch (c. 100 × 75
+                    m). The tomb remains unopened, possibly due to concerns over preservation of its artifacts. For
+                    example, after the excavation of the Terracotta Army, the painted surface present on some terracotta
+                    figures began to flake and fade. The lacquer covering the paint can curl in fifteen seconds once
+                    exposed to Xi'an's dry air and can flake off in just four minutes.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>7. The Forbidden City</h2>
+                <img src="/china/images/the forbidden city of beijing.jpg" alt="the forbidden city of beijing" width="70%"
+                    height="500">
+                <p class="my-4">The Forbidden City is a palace complex in Dongcheng District, Beijing, China, at the
+                    center of the Imperial City of Beijing. It is surrounded by numerous opulent imperial gardens and
+                    temples including the Zhongshan Park, the sacrificial Imperial Ancestral Temple, the Beihai Park,
+                    and the Jingshan Park.
+                    The Forbidden City was constructed from 1406 to 1420, and was the former Chinese imperial palace and
+                    winter residence of the Emperor of China from the Ming dynasty (since the Yongle Emperor) to the end
+                    of the Qing dynasty, between 1420 and 1924.
+                    It is listed by UNESCO as the largest collection of preserved ancient wooden structures in the
+                    world. Since 2012, the Forbidden City has seen an average of 14 million visitors annually, and
+                    received more than 19 million visitors in 2019.
+                    The Forbidden City in Beijing is one of the largest and most well-preserved ancient wooden
+                    structures in the world. It was listed as the first batch of national key cultural relics in 1961.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>8. West Lake</h2>
+                <img src="/china/images/bridge at west lake in hangzhou.jpg" alt="bridge at west lake in hangzhou" width="70%"
+                    height="500">
+                <p class="my-4">West Lake is a freshwater lake in Hangzhou, China. It is divided into five sections by
+                    three causeways. There are numerous temples, pagodas, gardens, and natural/artificial islands within
+                    the lake. Gushan is the largest natural island and three artificial islands: Xiaoyingzhou, Huixin
+                    Pavilion, and Ruan Gongdunstand at the middle of the lake. Leifeng Pagoda and Baochu Pagoda are
+                    separated by the lake. Mirroring each other, the basic pattern of "one mountain, two towers, three
+                    islands, three banks, and five lakes" is formed.
+                    West Lake has influenced poets and painters throughout Chinese history for its natural beauty and
+                    historic relics, and it has also been among the most important sources of inspiration for Chinese
+                    garden designers. It was made a UNESCO World Heritage Site in 2011, described as having "influenced
+                    garden design in the rest of China as well as Japan and Korea over the centuries" and reflecting "an
+                    idealized fusion between humans and nature".
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>9. The Jade Dragon Snow Mountains</h2>
+                <img src="/china/images/jade dragon snow maountain.jpg" alt="jade dragon snow maountain" width="70%"
+                    height="500">
+                <p class="my-4">Jade Dragon Snow Mountain is a mountain massif or small mountain range in Yulong Naxi
+                    Autonomous County, Lijiang, in Yunnan province, China. Its highest peak is named Shanzidou or
+                    Shan-Tzu-tou and it is 5,596 m (18,360 ft) above sea level.
+                    The view of the massif from the gardens at the Black Dragon Pool (Heilong Tan) in Lijiang is noted
+                    as one of China's finest views.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>10. Victoria Harbor</h2>
+                <img src="/china/images/victoria harbor hong kong.jpg" alt="victoria harbor hong kong" width="70%"
+                    height="500">
+                <p class="my-4">Victoria Harbour is a natural landform harbour in Hong Kong separating Hong Kong Island
+                    in the south from the Kowloon Peninsula to the north. The harbour's deep, sheltered waters and
+                    strategic location on South China Sea were instrumental in Hong Kong's establishment as a British
+                    colony in 1841 and its subsequent development as a trading centre.
+                    The harbour is a major tourist attraction of Hong Kong. Lying in the middle of the territory's dense
+                    urban region, the harbour is the site of annual fireworks displays and its promenades are used as
+                    gathering places for residents and also tourists.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="text-muted">© 2022 enTouriastic, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

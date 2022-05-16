@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6f425541e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Top 10 places to visit in Granada</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">enTouriastic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Continents
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Europe</a></li>
+                            <li><a class="dropdown-item" href="#">Asia</a></li>
+                            <li><a class="dropdown-item" href="#">Australia</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Rate us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Gallary/gallary.html">Gallary</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                </form>
+                <form class="d-flex my-3">
+                    <button type="button" class="btn btn-outline-info mx-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign up for free</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body p-5 pt-0">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="firstName" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="lastName" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="username" class="form-label">Username</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control" id="username" placeholder="Username"
+                                            required="">
+                                        <div class="invalid-feedback">
+                                            Your username is required.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email <span
+                                            class="text-muted">(Optional)</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address for shipping updates.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary my-4" type="submit">Sign
+                                up</button>
+                            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+
+                            <hr class="my-2">
+                            <h2 class="fs-5 fw-bold mb-3">Or sign up with</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                                <i class="fa-brands fa-twitter"></i>
+                                Twitter
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                                <i class="fa-brands fa-facebook"></i>
+                                Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                                <i class="fa-brands fa-instagram"></i>
+                                Instagram
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Username</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Header-->
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">Japan</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4">Japan is an island country in East Asia. It is situated in the northwest Pacific Ocean,
+                    and is bordered on the west by the Sea of Japan, while extending from the Sea of Okhotsk in the
+                    north toward the East China Sea and Taiwan in the south. Japan is a part of the Ring of Fire
+                    Tokyo is the nation's capital and largest city; other major cities include Yokohama, Osaka, Nagoya,
+                    Sapporo, Fukuoka, Kobe, and Kyoto.
+
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Plan ypur trip
+                        here</button>
+                    <a href="/contact.html">
+                        <button type="button" class="btn btn-outline-light btn-lg px-4">Need help?</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Main Content-->
+    <div class="container my-4">
+        <div class="place">
+            <div class="text-center">
+                <h2>1. Kyoto</h2>
+                <img src="/Japan/images/Kyoto.jpg" alt="Alhambra" width="70%" height="500">
+                <p class="my-4">Kyoto, officially Kyoto City, is the capital city of Kyoto Prefecture in Japan. Located
+                    in the Kansai region on the island of Honshu, Kyoto forms a part of the Keihanshin metropolitan area
+                    along with Osaka and Kobe.
+                    Kyoto is considered the cultural capital of Japan and a major tourist destination. It is home to
+                    numerous Buddhist temples, Shinto shrines, palaces and gardens, some of which are listed
+                    collectively by UNESCO as a World Heritage Site. Prominent landmarks include the Kyoto Imperial
+                    Palace, Kiyomizu-dera, Kinkaku-ji, Ginkaku-ji and the Katsura Imperial Villa. Kyoto is also a center
+                    of higher learning, with Kyoto University being an institution of international renown.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>2. Nara</h2>
+                <img src="/Japan/images/Nara.jpg" alt="Generalife" width="70%" height="500">
+                <p class="my-4">Nara, is the capital city of Nara Prefecture, Japan. Nara is a core city located in the
+                    northern part of Nara Prefecture bordering the Kyoto Prefecture.
+                    Nara is home to eight temples, shrines, and ruins, specifically Tōdai-ji, Saidai-ji, Kōfuku-ji,
+                    Kasuga Shrine, Gangō-ji, Yakushi-ji, Tōshōdai-ji, and the Heijō Palace, together with Kasugayama
+                    Primeval Forest, collectively form the Historic Monuments of Ancient Nara, a UNESCO World Heritage
+                    Site.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>3. Mt. Fuji</h2>
+                <img src="/Japan/images/Mount_Fuji_from_Lake_Motosu.jpg" alt="Cathedral" width="70%" height="500">
+                <p class="my-4">Mount Fuji, or Fugaku, located on the island of Honshū, is the highest mountain in
+                    Japan, standing 3,776.24 m (12,389.2 ft). It is the second-highest volcano located on an island in
+                    Asia (after Mount Kerinci on the island of Sumatra), and seventh-highest peak of an island on Earth.
+                    Mount Fuji is an active stratovolcano that last erupted from 1707 to 1708.
+                    Mount Fuji is one of Japan's "Three Holy Mountains" along with Mount Tate and Mount Haku. It is a
+                    Special Place of Scenic Beauty and one of Japan's Historic Sites. It was added to the World Heritage
+                    List as a Cultural Site on June 22, 2013.
+                    According to UNESCO, Mount Fuji has "inspired artists and poets and been the object of pilgrimage
+                    for centuries". UNESCO recognizes 25 sites of cultural interest within the Mount Fuji locality.
+                    These 25 locations include the mountain and the Shinto shrine, Fujisan Hongū Sengen Taisha.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>4. Hokkaido</h2>
+                <img src="/Japan/images/Hokkaido.jpg" alt="Albayzin" width="70%" height="500">
+                <p class="my-4">Hokkaidō, officially Hokkaidō Circuit Prefecture, is the second largest island of Japan
+                    and comprises the largest and northernmost prefecture.[1] The Tsugaru Strait separates Hokkaidō from
+                    Honshu; the two islands are connected by the undersea railway Seikan Tunnel.
+                    The largest city on Hokkaidō is its capital, Sapporo, which is also its only ordinance-designated
+                    city.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>5. Hiroshima</h2>
+                <img src="/Japan/images/Hiroshima.jpg" alt="Royal Chapel of Granada" width="70%" height="500">
+                <p class="my-4">Hiroshima is the capital of Hiroshima Prefecture in Japan.
+                    Hiroshima was the first city targeted by a nuclear weapon. This occurred on August 6, 1945, at 8:15
+                    a.m., when the United States Army Air Forces (USAAF) dropped the atomic bomb "Little Boy" on the
+                    city.[6] Most of the city was destroyed, and by the end of the year between 90,000 and 166,000 had
+                    died as a result of the blast and its effects. The Hiroshima Peace Memorial (a UNESCO World Heritage
+                    Site) serves as a memorial of the bombing.
+
+            </div>
+            <div class="text-center">
+                <h2>6. Sapporo</h2>
+                <img src="/Japan/images/sapporo.jpg" alt="Sacromonte" width="70%" height="500">
+                <p class="my-4">Sapporo is a city in Japan. It is the largest city north of Tokyo, Japan and the largest
+                    city on Hokkaido, the northernmost main island of the country. It is the capital city of Hokkaido
+                    Prefecture and Ishikari Subprefecture.
+                    Sapporo has a humid continental climate, with a wide range of temperature between the
+                    summer and winter.
+                    The annual Sapporo Snow Festival draws more than 2 million tourists from abroad.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>7. Osaka</h2>
+                <img src="/Japan/images/Osaka.jpg" alt="Charterhouse" width="70%" height="500">
+                <p class="my-4">Osaka is a designated city in the Kansai region of Honshu in Japan. It is the capital of
+                    and most populous city in Osaka Prefecture, and the third most populous city in Japan, following
+                    Tokyo and Yokohama
+                    Famous landmarks in the city include Osaka Castle, Osaka Aquarium Kaiyukan, Dōtonbori, Tsūtenkaku in
+                    Shinsekai, Tennōji Park, Abeno Harukas, Sumiyoshi Taisha Grand Shrine, and Shitennō-ji, one of the
+                    oldest Buddhist temples in Japan.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>8. Yakushima</h2>
+                <img src="/Japan/images/Shiratani_Unsui_Gorge,_Yakushima_Island,_Kagoshima;_July_2015_(03).jpg"
+                    alt="Mosque of Granada" width="70%" height="500">
+                <p class="my-4">Yakushima is one of the Ōsumi Islands in Kagoshima Prefecture, Japan
+                    Access to the island is by hydrofoil ferry (7 or 8 times a day from Kagoshima, depending on the
+                    season), slow car ferry (once or twice a day from Kagoshima), or by air to Yakushima Airport (3 to 5
+                    times daily from Kagoshima, once daily from Fukuoka and once daily from Osaka).
+                    Yakushima's unique remnant of warm/temperate ancient forest has been a natural World Heritage Site
+                    since 1993.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>9. Fukuoka</h2>
+                <img src="/Japan/images/Fukuoka_Prefecture.jpg" alt="Museum of Fine Arts" width="70%" height="500">
+                <p class="my-4">Fukuoka is the sixth-largest city in Japan, the second-largest port city after Yokohama,
+                    and the capital city of Fukuoka Prefecture, Japan. The city is built along the shores of Hakata Bay,
+                    and has been a center of international commerce since ancient times.
+                    Because of the cross-cultural exposure, and the relatively great distance from the social and
+                    political centers of Kyoto, Osaka, and later, Edo (Tokyo), Fukuoka gained a distinctive local
+                    culture and dialect that has persisted to the present.
+
+            </div>
+            <div class="text-center">
+                <h2>10. Shirakawago</h2>
+                <img src="/Japan/images/1280px-Shirakawago.jpg" alt="Islamic bathhouse" width="70%" height="500">
+                <p class="my-4">Shirakawa is a village located in Ōno District, Gifu Prefecture, Japan. It is best known
+                    for being the site of Shirakawa-gō, a small, traditional village showcasing a building style known
+                    as gasshō-zukuri. Together with Gokayama in Nanto, Toyama, it is one of UNESCO's World Heritage
+                    Sites.
+                    Shirakawa Village has a humid continental climate (Koppen Dfa). It features four distinct seasons
+                    with winter being its most recognised. Shirakawa is noted as one of the snowiest places in Japan.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>11. Kanazawa</h2>
+                <img src="/Japan/images/Oyama_Shrine,_Kanazawa;_June_2016_(02).jpg" alt="Islamic bathhouse" width="70%"
+                    height="500">
+                <p class="my-4">The area around Kanazawa was part of ancient Kaga Province. The name "Kanazawa", which
+                    literally means "marsh of gold", is said to derive from the legend of the peasant Imohori Togoro
+                    (literally "Togoro Potato-digger"), who was digging for potatoes when flakes of gold washed up. The
+                    well in the grounds of Kenroku-en known as 'Kinjo Reitaku' (金城麗澤) to acknowledge these roots.
+                    Kanazawa is located in north-western Ishikawa Prefecture in the Hokuriku region of Japan and is
+                    bordered by the Sea of Japan to the west and Toyama Prefecture to the east. The city sits between
+                    the Sai and Asano rivers. The eastern portion of the city is dominated by the Japanese Alps. Parts
+                    of the city are within the borders of the Hakusan National Park.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>12. Kawagoe</h2>
+                <img src="/Japan/images/1024px-Kawagoe_Kashiya_Yokocho_2013-09.jpg" alt="Islamic bathhouse" width="70%"
+                    height="500">
+                <p class="my-4">The old trading town of Kawagoe in Saitama Prefecture is a place that offers this kind
+                    of taste of Japan's history. Kawagoe was a town made rich during the Edo Period (1603-1868) by its
+                    successful merchants. They displayed their wealth in their town's impressive architecture, and
+                    collected influence that even caught the attention of Japan's most powerful shogun. And fortunately
+                    for us today, the town has preserved its history well.
+
+                </p>
+            </div>
+            <div class="text-center">
+                <h2>13. Ueno Park</h2>
+                <img src="/Japan/images/Ueno park.jpg" alt="Islamic bathhouse" width="70%" height="500">
+                <p class="my-4">Ueno Park is a spacious public park in the Ueno district of Taitō, Tokyo, Japan.
+                    The home of a number of major museums, Ueno Park is also celebrated in spring for its cherry
+                    blossoms and hanami. In recent times the park and its attractions have drawn over ten million
+                    visitors a year, making it Japan's most popular city park.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="text-muted">© 2022 enTouriastic, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
